@@ -5,7 +5,7 @@ export class Game {
     public currentPlayer: number = 0;
 
     constructor() {
-        for (let i = 0; 1 < 14; i++) {
+        for (let i = 1; i < 14; i++) {
             this.stack.push('ace_' + i);
             this.stack.push('clubs_' + i);
             this.stack.push('diamonds_' + i);
@@ -17,9 +17,12 @@ export class Game {
 
 function shuffel(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
+    
     while (0 !== currentIndex) {
+
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
+
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
