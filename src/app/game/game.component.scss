@@ -41,6 +41,7 @@
     0% {
         transform: scale(1);
     }
+
     40% {
         transform: scale(1.7);
     }
@@ -55,8 +56,8 @@
 }
 
 .player-position {
-     position: absolute;
-     right: 0;
+    position: absolute;
+    right: 0;
 }
 
 .plusImg {
@@ -65,8 +66,17 @@
     object-fit: cover;
 }
 
-.btn-add  {
+.btn-add {
     position: absolute;
     right: 32px;
+    bottom: 32px;
+}
+
+.pin-bottom {
+
+    position: absolute;
+    border: 10px;
+    left: 100px;
+    right: 100px;
     bottom: 32px;
 }
