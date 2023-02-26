@@ -15,16 +15,19 @@ export class GameComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
+
   ngOnInit(): void {
     this.newGame();
   }
+
 
   newGame() {
     this.game = new Game();
   }
 
+
   takeCard() {
-    if (!this.pickCardAnimation) {
+    if (!this.pickCardAnimation && this.game.players.length  > 1) {
       this.currentCard = this.game.stack.pop();
       this.pickCardAnimation = true;
 
@@ -34,8 +37,11 @@ export class GameComponent implements OnInit {
         this.game.playerCard.push(this.currentCard);
         this.pickCardAnimation = false;
       }, 1000)
+    } else {
+      alert('Bitte fügen Sie mindestens 2 Spieler hinzu.')
     }
   }
+
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
@@ -46,4 +52,5 @@ export class GameComponent implements OnInit {
       }
     });
   }
+  
 }
