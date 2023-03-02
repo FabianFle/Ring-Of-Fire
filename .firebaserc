@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "ringoffireff": {
-      "hosting": {
-        "RingOfFire": [
-          "ringoffireff"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "ringoffireff"
   }
